@@ -80,3 +80,7 @@ class TezWallet(sp.Contract):
         self._verify_user_availability(sp.sender)
 
         sp.result(self._get_balance(sp.sender))
+
+@sp.add_test(name='wallet')
+def test():
+    pass
