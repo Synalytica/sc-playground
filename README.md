@@ -34,9 +34,9 @@ export PATH="$SMARTPY_HOME/SmartPy.sh:$PATH"
 ### Dockerized
 
 ```bash
-docker run -v $PWD:/app -it tezos/sc-playground # [optional args to smartpy]
+docker run -v $PWD:/app -p 8080:8000 -e PORT=8000 -it tezos/sc-playground # [optional args to smartpy]
 ```
-
+- Browse `localhost:8080/` to view the tests and outputs.
 - Note: If you don't pass any args, all contract tests will be run and stored at
   `$OUTPUT_DIR` (default: `/app/results/`)
 

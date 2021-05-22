@@ -1,8 +1,7 @@
 FROM python:3.8-alpine
 LABEL author=pk13055, version=1.0
 
-ENV OUTPUT_DIR="/app/results"
-RUN mkdir -p /usr/local $OUTPUT_DIR
+RUN mkdir -p /usr/local /app/results
 
 RUN apk add --update --no-cache curl bash npm \
  && curl https://smartpy.io/cli/install.sh > install.sh \
@@ -14,7 +13,9 @@ RUN apk add --update --no-cache curl bash npm \
 WORKDIR /app
 
 ENV PATH="/root/smartpy-cli:$PATH"
+ENV PORT=8080
 COPY . .
 
-CMD ["./entrypoint.sh"]
+RUN npm i -g serve
+ENTRYPOINT ["./entrypoint.sh"]
 
