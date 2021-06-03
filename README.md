@@ -1,5 +1,7 @@
 # Smart Contract Playground
 
+![lint-status](https://github.com/Tezos-Portfolio-Platform/sc-playground/actions/workflows/linting-code-review.yml/badge.svg)
+
 ## Introduction
 
 This repo contains test contracts that can be compiled and tested to serve as a
