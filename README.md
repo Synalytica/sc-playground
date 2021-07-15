@@ -7,6 +7,11 @@
 This repo contains test contracts that can be compiled and tested to serve as a
 baseline for more complex applications.
 
+## CI/CD
+
+> TBD
+
+
 ## Installation
 
 ### Dockerized
